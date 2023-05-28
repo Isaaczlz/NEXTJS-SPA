@@ -1,1 +1,1 @@
-# NEXTJS-SPA
+# SPA-NEXTJS
