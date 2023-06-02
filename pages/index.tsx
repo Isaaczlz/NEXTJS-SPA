@@ -12,7 +12,6 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <NavBar />
       <h1>Hola Mundo soy Isaac</h1>
       {productList.map((prod) => (
         <div>{prod.name}</div>

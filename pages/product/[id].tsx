@@ -21,7 +21,6 @@ const ProductItem = () => {
 
   return (
     <section>
-      <NavBar />
       <h1>Product Item: {product?.name}</h1>
     </section>
   );

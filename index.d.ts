@@ -35,6 +35,10 @@ type TAPIAvoResponse = {
   error?: string;
 };
 
+type Props = {
+  children: React.ReactNode;
+};
+
 export type {
   Url,
   Json,
@@ -43,4 +47,5 @@ export type {
   TProduct,
   TAPIAVODetailResponse,
   TAPIAvoResponse,
+  Props,
 };
