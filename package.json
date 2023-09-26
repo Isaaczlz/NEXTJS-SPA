@@ -12,11 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "isomorphic-unfetch": "^4.0.2",
     "next": "^13.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "semantic-ui-css": "^2.5.0",
-    "semantic-ui-react": "^2.1.4"
+    "semantic-ui-react": "^2.1.4",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/node": "^20.2.3",

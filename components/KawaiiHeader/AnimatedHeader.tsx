@@ -1,13 +1,13 @@
-import React from 'react'
-import { Header, Transition } from 'semantic-ui-react'
+import React from "react";
+import { Header, Transition } from "semantic-ui-react";
 
-import { Avocado } from '@components/SVGIcons'
+import { Avocado } from "@components/SVGIcons";
 
 type AnimatedHeaderProps = {
-  visible: boolean
-  onClick: () => void
-  onComplete: () => void
-}
+  visible: boolean;
+  onClick: () => void;
+  onComplete: () => void;
+};
 
 const AnimatedHeader = ({
   visible,
@@ -22,10 +22,10 @@ const AnimatedHeader = ({
       duration={900}
       onComplete={onComplete}
     >
-      <Avocado size="50px" />
+      <Avocado size="70px" />
     </Transition>
     cado
   </Header>
-)
+);
 
-export default AnimatedHeader
+export default AnimatedHeader;
