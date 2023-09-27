@@ -1,30 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import NavBar from "../../components/NavBar/NavBar";
-import { TProduct } from "index";
+import Layout from "@components/Layout/Layout";
+import ProductSummary from "@components/ProductSummary/ProductSummary";
+import fetch from "isomorphic-unfetch";
+import * as i from "index";
 
-const ProductItem = () => {
-  const [product, setProduct] = useState<TProduct>();
-
-  const {
-    query: { id },
-  } = useRouter();
+const ProductPage = () => {
+  const { query } = useRouter();
+  const [product, setProduct] = useState<i.TProduct | null>(null);
 
   useEffect(() => {
-    if (id) {
-      window
-        .fetch(`/api/avo/${id}`)
+    if (query.id) {
+      fetch(`/api/avo/${query.id}`)
         .then((response) => response.json())
-        .then((data) => setProduct(data));
+        .then((data: i.TProduct) => {
+          setProduct(data);
+        });
     }
-  }, [id]);
+  }, [query.id]);
 
   return (
-    <section>
-      <NavBar />
-      <h1>Product Item: {product?.name}</h1>
-    </section>
+    <Layout>
+      {product == null ? null : <ProductSummary product={product} />}
+    </Layout>
   );
 };
-
-export default ProductItem;
+export default ProductPage;

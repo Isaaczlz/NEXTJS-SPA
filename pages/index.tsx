@@ -1,24 +1,53 @@
-import { TProduct } from "index";
-import React, { useEffect, useState } from "react";
-import NavBar from "../components/NavBar/NavBar";
+import React, { useState, useEffect } from "react";
+import fetch from "isomorphic-unfetch";
+import Link from "next/link";
+import Layout from "@components/Layout/Layout";
+import KawaiiHeader from "@components/KawaiiHeader/KawaiiHeader";
+import ProductList from "@components/ProductList/ProductList";
+import * as i from "index";
 
-const Home = () => {
-  const [productList, setProductList] = useState<TProduct[]>([]);
+// export const getStaticProps = async () => { // Static side generation
+//   const response = await fetch("/api/avo");
+//   const { data: productList }: i.TAPIAvoResponse = await response.json();
+
+//   return {
+//     props: { productList },
+//   };
+// };
+
+// export const getServerSideProps = async () => { // Server side rendered
+//   const response = await fetch("/api/avo");
+//   const { data: productList }: i.TAPIAvoResponse = await response.json();
+
+//   return {
+//     props: { productList },
+//   };
+// };
+
+// const HomePage = ({ productList }: { productList: i.TProduct[] }) => {
+
+const HomePage = () => {
+  const [productList, setProductList] = useState<i.TProduct[]>([]); // Client side rendered
   useEffect(() => {
     window
       .fetch("/api/avo")
       .then((response) => response.json())
-      .then(({ data, length }) => setProductList(data));
+      .then(({ data }: i.TAPIAvoResponse) => {
+        setProductList(data);
+      });
   }, []);
+
   return (
-    <div>
-      <NavBar />
-      <h1>Hola Mundo soy Isaac</h1>
-      {productList.map((prod) => (
-        <div>{prod.name}</div>
-      ))}
-    </div>
+    <Layout>
+      <KawaiiHeader />
+      <section style={{ textAlign: "center" }}>
+        <Link href="/yes-or-no">
+          <h4>¿Deberia comer un avo hoy?</h4>
+        </Link>
+      </section>
+      <ProductList products={productList} />
+    </Layout>
   );
 };
 
-export default Home;
+export default HomePage;

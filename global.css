@@ -1,0 +1,35 @@
+#__next {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: auto 1fr auto;
+}
+#__next > main {
+  margin: 1rem auto 0;
+}
+.ui.two.cards {
+  grid-row-gap: 2.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ui.cards {
+  margin: 2em;
+}
+
+.ui.card {
+  border: 0.1vh solid #418a5b;
+  border-radius: 0.3em;
+  margin: 1.8em;
+}
+.ui.card > .content {
+  border-top: solid #418a5b;
+}
+
+.ui.cards a.card:hover,
+.ui.link.card:hover,
+.ui.link.cards .card:hover,
+a.ui.card:hover,
+.ui.card.content:hover {
+  border: solid #418a5b;
+}
