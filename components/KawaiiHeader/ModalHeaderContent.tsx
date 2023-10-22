@@ -1,13 +1,13 @@
-import React from 'react'
-import { Grid, Header } from 'semantic-ui-react'
+import React from "react";
+import { Grid, Header } from "semantic-ui-react";
 
-import { PosMeMuero } from '@components/SVGIcons'
+import { PosMeMuero } from "@components/SVGIcons";
 
 const ModalHeaderContent = () => {
   return (
     <div className="container">
       <Grid columns={2}>
-        <Grid.Row verticalAlign={'middle'}>
+        <Grid.Row verticalAlign={"middle"}>
           <Grid.Column width="5">
             <PosMeMuero size="154px" />
           </Grid.Column>
@@ -28,7 +28,7 @@ const ModalHeaderContent = () => {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default ModalHeaderContent
+export default ModalHeaderContent;

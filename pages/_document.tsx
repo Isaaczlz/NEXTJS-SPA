@@ -9,7 +9,7 @@ class MyDocument extends Document {
           {/*Webfont*/}
           {/*Estilos externos */}
           {/*Scripts externos */}
-          <link rel="icon" href="/images/avo.png" />
+          <link rel="icon" href="/images/icon.png" />
           <title>Avocado</title>{" "}
         </Head>
         <body className="my-body-class">

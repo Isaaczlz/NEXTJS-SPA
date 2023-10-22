@@ -1,15 +1,15 @@
-import React from 'react'
-import Link from 'next/link'
-import { Segment, Container, Grid, List, Header } from 'semantic-ui-react'
+import React from "react";
+import Link from "next/link";
+import { Segment, Container, Grid, List, Header } from "semantic-ui-react";
 
 const Footer = () => (
   <Segment
     vertical
     as="footer"
     style={{
-      padding: '4em 0em',
-      marginTop: '3em',
-      borderTop: '1px solid #f2f2f2',
+      padding: "4em 1em",
+      marginTop: "3em",
+      borderTop: "1px solid #f2f2f2",
     }}
   >
     <Container text>
@@ -19,9 +19,7 @@ const Footer = () => (
             <Header as="h4" content="Nosotros" />
             <List>
               <List.Item>
-                <Link href="/about">
-                  Conoce más
-                </Link>
+                <Link href="/about">Conoce más</Link>
               </List.Item>
             </List>
           </Grid.Column>
@@ -29,31 +27,33 @@ const Footer = () => (
             <Header as="h4" content="Servicios" />
             <List>
               <List.Item>
-                <Link href="/">
-                  Todos los productos
-                </Link>
+                <Link href="/">Todos los productos</Link>
               </List.Item>
             </List>
           </Grid.Column>
           <Grid.Column width={7}>
             <Header as="h4">Hecho para</Header>
             <p>
-              Aprender a crear una  {' '} <a href="https://nextjs.org/"> SPA with NextJs</a> con el objetivo de ampliar conocimiento y experiencia. {' '}
+              Aprender a crear una{" "}
+              <a href="https://nextjs.org/"> SPA with NextJs</a> con el objetivo
+              de ampliar conocimiento y experiencia.{" "}
               <a href="https://www.linkedin.com/in/isaacgotta/">@IsaacGotta</a>
             </p>
-            <List horizontal style={{ display: 'flex' }}>
+            <List horizontal style={{ display: "flex" }}>
               <List.Item
                 icon="linkedin"
-                style={{ display: 'flex' }}
-                content={<Link href="https://www.linkedin.com/in/isaacgotta/">Linkedin</Link>}
+                style={{ display: "flex" }}
+                content={
+                  <Link href="https://www.linkedin.com/in/isaacgotta/">
+                    Linkedin
+                  </Link>
+                }
               />
               <List.Item
                 icon="github"
-                style={{ display: 'flex' }}
+                style={{ display: "flex" }}
                 content={
-                  <a href="https://github.com/Isaaczlz/NEXTJS-SPA">
-                    GitHub
-                  </a>
+                  <a href="https://github.com/Isaaczlz/NEXTJS-SPA">GitHub</a>
                 }
               />
             </List>
@@ -62,7 +62,7 @@ const Footer = () => (
       </Grid>
       <div className="colophon">
         <p className="colophon-entry">
-          Icons made by{' '}
+          Icons made by{" "}
           <a
             target="_blank"
             href="https://www.flaticon.com/authors/freepik"
@@ -70,13 +70,13 @@ const Footer = () => (
           >
             Freepik
           </a>
-          {' from '}
+          {" from "}
           <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">
             www.flaticon.com
           </a>
         </p>
         <p className="colophon-entry">
-          Avocado images taken from{' '}
+          Avocado images taken from{" "}
           <a
             className="acnor"
             target="_blank"
@@ -85,7 +85,7 @@ const Footer = () => (
           >
             Avocado 101
           </a>
-          {' at '}
+          {" at "}
           <a
             target="_blank"
             href="https://www.californiaavocado.com"
@@ -109,6 +109,6 @@ const Footer = () => (
       }
     `}</style>
   </Segment>
-)
+);
 
-export default Footer
+export default Footer;
